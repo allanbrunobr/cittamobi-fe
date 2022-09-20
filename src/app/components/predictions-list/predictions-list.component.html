@@ -1,0 +1,22 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Estimada</th>
+        <th scope="col">Rota</th>
+        <th scope="col">Serviço</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let prediction of predictions">
+        <td>{{ prediction.predictionType == 'ARRIVAL'? 'CHEGADA': 'SAÍDA'}}</td>
+        <td>{{ prediction.routeMnemonic }}</td>
+        <td>{{ prediction.serviceMnemonic }}</td>
+
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
